@@ -8,7 +8,7 @@ namespace Project_GG
 {
     public class Map
     {
-        int[,] map = new int [20,20];
+        int[,] map = new int[12, 12];
 
 
         public Map()
@@ -16,18 +16,51 @@ namespace Project_GG
             InitMap();
         }
 
+        public void CheckMap()
+        {
+            for (int i = 0; i < map.GetLength(0); i++)
+            {
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    Console.WriteLine($"【{i},{j}】 : {map[i, j]}");
+                }
+            }
+        }
+
         // 맵 그리기
         public void DrawMap()
         {
             for (int i = 0; i < map.GetLength(0); i++)
             {
-                map[i, 0] = i;
+
 
                 for (int j = 0; j < map.GetLength(1); j++)
                 {
-                    DrawTile(map[i,j]);
+                    DrawTile(map[i, j]);
                 }
 
+
+                switch (i)
+                {
+                    case 4:
+                        Console.Write($"\t [↑] 이동");
+                        break;
+
+                    case 5:
+                        Console.Write($"\t [→] 이동");
+                        break;
+
+                    case 6:
+                        Console.Write($"\t [←] 이동");
+                        break;
+
+                    case 7:
+                        Console.Write($"\t [↓] 이동");
+                        break;
+
+                    default:
+                        break;
+                }
                 Console.WriteLine($"");
             }
         }
@@ -58,6 +91,28 @@ namespace Project_GG
                 for (int j = 0; j < map.GetLength(1); j++)
                 {
                     map[i, j] = -1;
+                }
+            }
+        }
+
+        public void Update()
+        {
+            int iPx = Phase.player.x;
+            int iPy = Phase.player.y;
+
+            for (int i = 0; i < map.GetLength(0); i++)
+            {
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    if (iPx == i && iPy == j)
+                    {
+                        map[i, j] = 1;
+                    }
+
+                    else
+                    {
+                        map[i, j] = -1;
+                    }
                 }
             }
         }

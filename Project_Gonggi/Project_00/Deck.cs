@@ -4,18 +4,16 @@ using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Project_GG_VAR;
 
 namespace Project_GG
 {
     public class Deck
     {
-        static public int[] decklist = new int[GlobalVAR.iLimit];
+        public int[] decklist = new int[Program.g_iLimit];
 
         public Deck()
         {
             InitDeck();
-            StarterDeck(0);
         }
 
         // 덱 초기화
@@ -31,6 +29,8 @@ namespace Project_GG
         // 덱 보여주기
         public void ShowDeck()
         {
+            QuickDraw.DrawLine("None", 2);
+
             for (int i = 0; i < decklist.Length; i++)
             {
                 if (decklist[i] >= 0)

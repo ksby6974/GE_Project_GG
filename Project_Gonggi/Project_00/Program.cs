@@ -2,70 +2,44 @@
 using System.Drawing;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
+using Project_GG;
 
 namespace Project_GG
 {
+
     internal class Program
     {
+        // 전역 변수
+        public const int g_blank = 8;
+        public const int g_iLimit = 10000;
+        public const int g_WindowWidth = 80;
+        public const int g_WindowHeight = 40;
 
-        static bool bLoop_MainGame = true;
-
+        public static bool bLoop_MainGame = true;
+        public static int iStart = 0;
+        //public int g_iTurn = 0;
 
         static void Main(string[] args)
         {
+            // 초기화
+            Set_Screen.SetScreen();
+
+            // 전체 페이즈
+            Phase phase = new Phase();
+
             while (bLoop_MainGame)
-            {
+            {  
                 // 【비포 페이즈】
-
-                // 초기화 부분
-                Map map = new Map();
-                map.DrawMap();
-
-                Deck playerdeck = new Deck();
-
+                phase.phase_bf.Update(iStart);
 
                 // 【메인 페이즈】
-                MainPhase(playerdeck);
-
+                phase.phase_main.Update(iStart);
 
                 // 【애프터 페이즈】
-
-
-                // 대기 시간
-                ConsoleKeyInfo key;
-                key = Console.ReadKey(true);
-
-
-                // 버퍼 처리
-                Console.Clear();
+                phase.phase_af.Update(iStart);
             }
+
+            Console.WriteLine("Main ::");
         }
-
-        // 메인 페이즈 함수
-        static public void MainPhase(Deck playerdeck)
-        {
-            // 명령 입력 UI
-            //Graphics g = this.CreateGraphics();
-            
-
-            Console.WriteLine($"[{1}] 덱 확인");
-
-            // 플레이어 입력
-            ConsoleKeyInfo key;
-            key = Console.ReadKey(true);
-
-            switch (key.Key)
-            {
-                case ConsoleKey.NumPad1:
-                    playerdeck.ShowDeck();
-                    break;
-
-                default:
-                    //
-                    break;
-            }
-        }
-
-
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Project_Gonggi\\Project_00\\Project_GG.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Project_GG.csproj",
       "projectName": "Project_GG",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\Project_Gonggi\\Project_00\\Project_GG.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Project_GG.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\Project_Gonggi\\Project_00\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
