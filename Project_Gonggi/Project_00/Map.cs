@@ -8,7 +8,7 @@ namespace Project_GG
 {
     public class Map
     {
-        int[,] map = new int[12, 12];
+        int[,] map = new int[_Limit.g_Limit_Position, _Limit.g_Limit_Position];
 
 
         public Map()
@@ -33,10 +33,10 @@ namespace Project_GG
             for (int i = 0; i < map.GetLength(0); i++)
             {
 
-
                 for (int j = 0; j < map.GetLength(1); j++)
                 {
-                    DrawTile(map[i, j]);
+                    //Console.Write($"【{j},{i}】 ");
+                    DrawTile(map[j,i]);
                 }
 
 
@@ -77,6 +77,11 @@ namespace Project_GG
                     s = "▲";
                     break;
 
+                // Enemy
+                case 100:
+                    s = "●";
+                    break;
+
                 // None
                 default:
                     break;
@@ -97,22 +102,11 @@ namespace Project_GG
 
         public void Update()
         {
-            int iPx = Phase.player.x;
-            int iPy = Phase.player.y;
-
             for (int i = 0; i < map.GetLength(0); i++)
             {
                 for (int j = 0; j < map.GetLength(1); j++)
                 {
-                    if (iPx == i && iPy == j)
-                    {
-                        map[i, j] = 1;
-                    }
-
-                    else
-                    {
-                        map[i, j] = -1;
-                    }
+                    map[i, j] = _Check.Check_TargetOnMap(i,j);
                 }
             }
         }

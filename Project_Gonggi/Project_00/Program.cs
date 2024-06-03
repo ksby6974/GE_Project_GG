@@ -9,12 +9,6 @@ namespace Project_GG
 
     internal class Program
     {
-        // 전역 변수
-        public const int g_blank = 8;
-        public const int g_iLimit = 10000;
-        public const int g_WindowWidth = 80;
-        public const int g_WindowHeight = 40;
-
         public static bool bLoop_MainGame = true;
         public static int iStart = 0;
         //public int g_iTurn = 0;

@@ -9,7 +9,7 @@ namespace Project_GG
 {
     public class Deck
     {
-        public int[] decklist = new int[Program.g_iLimit];
+        public int[] decklist = new int[_Limit.g_Limit];
 
         public Deck()
         {

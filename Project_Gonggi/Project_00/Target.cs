@@ -8,22 +8,22 @@ namespace Project_GG
 {
     public class Target
     {
-        private int iIndex;
-        protected string sName;
+        public int iId;
+        protected string sName = "defaultName";
         public int x;
         public int y;
         protected int iHpLimit;
-        protected int iHp;
+        public int iHp = 0;
         public Deck targetdeck;
 
-        public Target(string name, int i)
+        public Target(int ihp)
         {
-            this.sName = name;
-            this.iHpLimit = i;
-            iHp = iHpLimit;
+            this.iHpLimit = ihp;
+            this.iHp = iHpLimit;
             targetdeck = new Deck();
             targetdeck.InitDeck();
         }
+
 
         public void Position(int x, int y)
         {
@@ -35,8 +35,10 @@ namespace Project_GG
     public class Player : Target
     {
 
-        public Player(string sName, int i) : base(sName, i)
+        public Player(int cf, int ihp) : base(ihp)
         {
+            sName = "Player";
+            this.iId = 0;
             //Console.WriteLine("Player");
             this.targetdeck.StarterDeck(0);
         }
@@ -45,8 +47,11 @@ namespace Project_GG
     public class Enemy : Target
     {
 
-        public Enemy(string sName, int i) : base(sName, i)
+        public Enemy(int cf, int ihp) : base(ihp)
         {
+            // 이름 분류
+            sName = _Data.Data_EnemyName(cf);
+            this.iId = cf;
             //Console.WriteLine("Enemy");
             //
         }

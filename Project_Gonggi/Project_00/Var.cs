@@ -55,13 +55,13 @@ namespace Project_GG
 
             if (iWho == 2)
             {
-                for (int i = 0; i < Program.g_blank; i++)
+                for (int i = 0; i < _Limit.g_Limit_Blank; i++)
                 {
                     Console.WriteLine();
                 }
 
             }
-            for (int i = 0; i < Program.g_WindowWidth; i++)
+            for (int i = 0; i < _Limit.g_Limit_WindowWidth; i++)
             {
                 if (i == 3)
                 {
@@ -76,7 +76,7 @@ namespace Project_GG
                             break;
 
                         case 1:
-                            DrawLine_Player(Phase.player.x, Phase.player.y);
+                            //DrawLine_Player(Phase.player.x, Phase.player.y);
                             break;
 
                         case 2:
@@ -95,7 +95,7 @@ namespace Project_GG
 
             if (iWho == 1)
             {
-                for (int i = 0; i < Program.g_blank; i++) 
+                for (int i = 0; i < _Limit.g_Limit_Blank; i++) 
                 {
                     Console.WriteLine();
                 }
@@ -114,7 +114,24 @@ namespace Project_GG
 
         static public void DrawLine_Turn(int i)
         {
-            Console.Write($"『 Turn : {i}』");
+            string sShow;
+
+            switch (Phase.g_cmd)
+            {
+                case 0:
+                    sShow = "플레이어 명령 대기중";
+                    break;
+
+                case 1:
+                    sShow = "플레이어 덱 확인중";
+                    break;
+
+                default:
+                    sShow = "default";
+                    break;
+            }
+
+            Console.Write($"【{sShow}】『Turn : {i}』");
         }
 
         static public void DrawLine_Cmd()

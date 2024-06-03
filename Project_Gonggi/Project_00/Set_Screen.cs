@@ -10,7 +10,7 @@ namespace Project_GG
     {
         static public void SetScreen()
         {
-            Console.SetWindowSize(Program.g_WindowWidth, Program.g_WindowHeight);
+            Console.SetWindowSize(_Limit.g_Limit_WindowWidth,_Limit.g_Limit_WindowHeight);
         }
     }
 }

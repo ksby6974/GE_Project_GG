@@ -12,7 +12,7 @@ namespace Project_GG
     {
         public Card_1()
         {
-            string name = "이동";
+            //string name = "이동";
         }
     }
 
@@ -20,7 +20,7 @@ namespace Project_GG
     {
         public Card_2()
         {
-            string name = "방어";
+            //string name = "방어";
         }
     }
 
@@ -28,7 +28,7 @@ namespace Project_GG
     {
         public Card_3()
         {
-            string name = "직사";
+            //string name = "직사";
         }
     }
 }

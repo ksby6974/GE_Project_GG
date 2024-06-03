@@ -19,8 +19,11 @@ namespace Project_GG
 
         // 맵
         static public Map currentmap;
-        static public Player player;
 
+        // 대상
+        static public Target[] aTargets = new Target[_Limit.g_Limit_Target];
+
+        // 생성자
         public Phase()
         {
             //Console.WriteLine("Phase 생성");
@@ -28,6 +31,51 @@ namespace Project_GG
             phase_bf = new Phase_Before();
             phase_main = new Phase_Main();
             phase_af = new Phase_After();
+
+            for (int i = 0; i < _Limit.g_Limit_Target; i++)
+            {
+                aTargets[i] = new Target(0);
+                aTargets[i].iHp = 0;
+            }
+        }
+
+        // id = 분류
+        // hp = 체력
+        public void CreateTarget(int iId = 0, int iHp = 0)
+        {
+            int iResult = 1;
+            int iIndex = 0;
+
+            Console.Write($"{aTargets[0].iHp}");
+            
+            //for (int i = 0; i < aTargets.Length; i++)
+            {
+                //if (aTargets[i].iId != 0)
+                //{
+                   // Console.Write($"{i} : {aTargets[i].iId}");
+
+                    //iIndex = i;
+                    //break;
+                //}
+            }
+
+            // 생성 성공
+            if (iIndex > 0)
+            {
+               if (iId == 1)
+               {
+                   //aTargets[iIndex] = new Player(iId,iHp);
+               }
+               else
+               {
+                   //aTargets[iIndex] = new Enemy(iId,iHp);
+               }
+            }
+            // 생성 실패
+            else
+            {
+                Console.WriteLine($"생성 실패");
+            }
         }
 
         public void ShowTurn()

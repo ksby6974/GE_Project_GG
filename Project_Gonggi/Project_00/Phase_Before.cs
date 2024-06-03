@@ -9,8 +9,6 @@ namespace Project_GG
 {
     public class Phase_Before
     {
-        public Enemy enemy;
-
         public Phase_Before()
         {
             Program.iStart = 1;
@@ -35,10 +33,19 @@ namespace Project_GG
         public void InitGame()
         {
             Phase.currentmap = new Map();
-            Phase.player = new Player("Player",100);
-            Phase.player.Position(2,2);
 
-            enemy = new Enemy("Slime", 100);
+            // 플레이어 생성
+            Phase.aTargets[0] = new Player(-1,100);
+
+            //Phase.CreateTarget(-1,100);
+
+            // 플레이어 위치
+            //Phase.player.Position(5,9);
+
+            // 적 생성
+            //Phase.CreateTarget(1,100);
+
+            // 적 위치
         }
     }
 }
