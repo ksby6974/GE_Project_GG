@@ -16,7 +16,7 @@ namespace Project_GG
         static void Main(string[] args)
         {
             // 초기화
-            Set_Screen.SetScreen();
+            _Set.SetScreen();
 
             // 전체 페이즈
             Phase phase = new Phase();

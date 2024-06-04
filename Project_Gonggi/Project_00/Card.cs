@@ -9,22 +9,20 @@ namespace Project_GG
     public class Card
     {
         // 카드 생성 순서
-        public int iIndex;
-
-        // 카드 분류
         public int iCard;
+        public string sName;
 
-        // 카드 이름
-        public string sName = "Dummy";
-    }
+        // 효과
 
-
-    public class Card_ : Card
-    {
-        public Card_(int index, int card)
+        public Card(int iCard = 0)
         {
-            iIndex = index;
-            iCard = card;
+            InitCard();
+            this.iCard = iCard;
+        }
+
+        public void InitCard()
+        {
+            this.sName = "Blank";
         }
     }
 }

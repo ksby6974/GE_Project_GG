@@ -28,47 +28,41 @@ namespace Project_GG
         {
             //Console.WriteLine("Phase 생성");
 
+            InitTargets();
             phase_bf = new Phase_Before();
             phase_main = new Phase_Main();
             phase_af = new Phase_After();
-
-            for (int i = 0; i < _Limit.g_Limit_Target; i++)
-            {
-                aTargets[i] = new Target(0);
-                aTargets[i].iHp = 0;
-            }
         }
 
         // id = 분류
         // hp = 체력
-        public void CreateTarget(int iId = 0, int iHp = 0)
+        static public int CreateTarget(int iId = 0, int iHp = 0)
         {
             int iResult = 1;
-            int iIndex = 0;
+            int iIndex = -1;
 
-            Console.Write($"{aTargets[0].iHp}");
-            
-            //for (int i = 0; i < aTargets.Length; i++)
+            for (int i = 0; i < aTargets.Length; i++)
             {
-                //if (aTargets[i].iId != 0)
-                //{
-                   // Console.Write($"{i} : {aTargets[i].iId}");
-
-                    //iIndex = i;
-                    //break;
-                //}
+                if (aTargets[i].iId == -1)
+                {
+                    iIndex = i;
+                    //Console.WriteLine($"대상 【{iIndex}】번째 비었음");
+                    break;
+                }
             }
 
             // 생성 성공
-            if (iIndex > 0)
+            if (iIndex >= 0)
             {
-               if (iId == 1)
+               if (iId == 0)
                {
-                   //aTargets[iIndex] = new Player(iId,iHp);
+                    //Console.WriteLine($"플레이어 생성");
+                    aTargets[iIndex] = new Player(iId,iHp);
                }
                else
                {
-                   //aTargets[iIndex] = new Enemy(iId,iHp);
+                    //Console.WriteLine($"적 생성");
+                    aTargets[iIndex] = new Enemy(iId,iHp);
                }
             }
             // 생성 실패
@@ -76,8 +70,30 @@ namespace Project_GG
             {
                 Console.WriteLine($"생성 실패");
             }
+
+            return iIndex;
         }
 
+        // 대상들 초기화
+        static public void InitTargets()
+        {
+            for (int i = 0; i < _Limit.g_Limit_Target; i++)
+            {
+                aTargets[i] = new Target(-1,-1);
+                //Console.WriteLine($"【{i}】{aTargets[i]}　NM:{aTargets[i].sName}　ID:{aTargets[i].iId}　HP:{aTargets[i].iHp}");
+            }
+        }
+
+        // 대상들 확인
+        static public void ShowTargets()
+        {
+            for (int i = 0; i < aTargets.Length; i++)
+            {
+                Console.WriteLine($"【{i}】{aTargets[i]}　NM:{aTargets[i].sName}　ID:{aTargets[i].iId}　HP:{aTargets[i].iHp}");
+            }
+        }
+
+        //
         public void ShowTurn()
         {
             Console.WriteLine($"차례 : {g_iTurn}");

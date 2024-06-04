@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,23 +71,24 @@ namespace Project_GG
         {
             string s = "·";
 
-            switch (i)
+            // Enemy
+            if (i >= 100)
             {
-                // Player
-                case 1:
-                    s = "▲";
-                    break;
-
-                // Enemy
-                case 100:
-                    s = "●";
-                    break;
-
-                // None
-                default:
-                    break;
+                _Set.SetTextColor("Enemy");
+                s = "●";
+            }
+            // Player
+            else if (i == 1)
+            {
+                _Set.SetTextColor("Player");
+                s = "▲";
+            }
+            else
+            {
+                ;
             }
             Console.Write($"{s}");
+            Console.ResetColor();
         }
 
         public void InitMap()

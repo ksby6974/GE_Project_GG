@@ -11,7 +11,9 @@ namespace Project_GG
     {
         static public void DrawLine(string sValue = "default", int iValue = 0, int iTurn = 0)
         {
+            int iBlank = _Limit.g_Limit_Blank;
             int iWho = 0;
+
             switch (sValue)
             {
                 case "Cmd":
@@ -53,9 +55,10 @@ namespace Project_GG
                     break;
             }
 
+            // 적의 상태창
             if (iWho == 2)
             {
-                for (int i = 0; i < _Limit.g_Limit_Blank; i++)
+                for (int i = 0; i < iBlank; i++)
                 {
                     Console.WriteLine();
                 }
@@ -63,6 +66,8 @@ namespace Project_GG
             }
             for (int i = 0; i < _Limit.g_Limit_WindowWidth; i++)
             {
+                int iTemp;
+
                 if (i == 3)
                 {
                     switch (iWho)
@@ -76,11 +81,13 @@ namespace Project_GG
                             break;
 
                         case 1:
-                            //DrawLine_Player(Phase.player.x, Phase.player.y);
+                            iTemp = _Check.Check_SearchPlayer();
+                            DrawLine_Player(Phase.aTargets[iTemp].x, Phase.aTargets[iTemp].y);
                             break;
 
                         case 2:
-                            DrawLine_Enemy();
+                            iTemp = _Check.Check_SearchEnemy_First();
+                            DrawLine_Enemy(Phase.aTargets[iTemp].x, Phase.aTargets[iTemp].y);
                             break;
 
                         default:
@@ -93,9 +100,16 @@ namespace Project_GG
 
             Console.WriteLine();
 
+            // 자신의 상태창
             if (iWho == 1)
             {
-                for (int i = 0; i < _Limit.g_Limit_Blank; i++) 
+                // 플레이어 현재 패 보여주기
+                int iPlayer = _Check.Check_SearchPlayer();
+                Phase.aTargets[iPlayer].targetdeck.Shuffle_Draw();
+
+                Phase.aTargets[iPlayer].targetdeck.Show_Hand();
+
+                for (int i = 0; i < iBlank; i++) 
                 {
                     Console.WriteLine();
                 }
@@ -104,12 +118,16 @@ namespace Project_GG
 
         static public void DrawLine_Player(int x, int y)
         {
+            _Set.SetTextColor("Player");
             Console.Write($"【 Player : {x},{y}】");
+            Console.ResetColor();
         }
 
-        static public void DrawLine_Enemy()
+        static public void DrawLine_Enemy(int x, int y)
         {
-            Console.Write($"【 Enemy 】");
+            _Set.SetTextColor("Enemy");
+            Console.Write($"【 Enemy : {x},{y}】");
+            Console.ResetColor();
         }
 
         static public void DrawLine_Turn(int i)
@@ -118,6 +136,10 @@ namespace Project_GG
 
             switch (Phase.g_cmd)
             {
+                case -1:
+                    sShow = "명령 재시도 부여";
+
+                    break;
                 case 0:
                     sShow = "플레이어 명령 대기중";
                     break;
@@ -131,7 +153,7 @@ namespace Project_GG
                     break;
             }
 
-            Console.Write($"【{sShow}】『Turn : {i}』");
+            Console.Write($"【{sShow}:{Phase.g_cmd}】『Turn : {i}』");
         }
 
         static public void DrawLine_Cmd()

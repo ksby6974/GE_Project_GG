@@ -35,15 +35,20 @@ namespace Project_GG
             Phase.currentmap = new Map();
 
             // 플레이어 생성
-            Phase.aTargets[0] = new Player(-1,100);
-
-            //Phase.CreateTarget(-1,100);
-
-            // 플레이어 위치
-            //Phase.player.Position(5,9);
+            int iPlayer = Phase.CreateTarget(0,10);
+            if (iPlayer > -1)
+            {
+                // 플레이어 위치
+                Phase.aTargets[iPlayer].Position(5, 9);
+            }
 
             // 적 생성
-            //Phase.CreateTarget(1,100);
+            int iEnemy = Phase.CreateTarget(1,3);
+            if (iEnemy > -1)
+            {
+                // 적 위치
+                Phase.aTargets[iEnemy].Position(5, 2);
+            }
 
             // 적 위치
         }
