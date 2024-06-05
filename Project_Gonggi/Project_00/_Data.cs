@@ -26,5 +26,31 @@ namespace Project_GG
 
             return sName;
         }
+
+        static public string Data_CardName(int id)
+        {
+            string sName = "Blank";
+
+            switch (id)
+            {
+                case (int)CardName.StraightShot:
+                    sName = "StraightShot";
+                    break;
+
+                case (int)CardName.Defense:
+                    sName = "Defense";
+                    break;
+
+                case (int)CardName.Moving:
+                    sName = "Moving";
+                    break;
+
+                default:
+                    sName = "Blank";
+                    break;
+            }
+
+            return sName;
+        }
     }
 }

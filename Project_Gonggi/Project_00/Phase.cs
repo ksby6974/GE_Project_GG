@@ -9,6 +9,7 @@ namespace Project_GG
     public class Phase
     {
         // 전역
+        static public int g_battle = 0;
         static public int g_iTurn = 0;
         static public int g_cmd = 0;
 
@@ -38,12 +39,11 @@ namespace Project_GG
         // hp = 체력
         static public int CreateTarget(int iId = 0, int iHp = 0)
         {
-            int iResult = 1;
             int iIndex = -1;
 
             for (int i = 0; i < aTargets.Length; i++)
             {
-                if (aTargets[i].iId == -1)
+                if (aTargets[i].Get_ID() == -1)
                 {
                     iIndex = i;
                     //Console.WriteLine($"대상 【{iIndex}】번째 비었음");
@@ -89,7 +89,7 @@ namespace Project_GG
         {
             for (int i = 0; i < aTargets.Length; i++)
             {
-                Console.WriteLine($"【{i}】{aTargets[i]}　NM:{aTargets[i].sName}　ID:{aTargets[i].iId}　HP:{aTargets[i].iHp}");
+                Console.WriteLine($"【{i}】{aTargets[i]}　NM:{aTargets[i].Get_Name()}　ID:{aTargets[i].Get_ID()}　HP:{aTargets[i].Get_HP()}");
             }
         }
 

@@ -82,12 +82,12 @@ namespace Project_GG
 
                         case 1:
                             iTemp = _Check.Check_SearchPlayer();
-                            DrawLine_Player(Phase.aTargets[iTemp].x, Phase.aTargets[iTemp].y);
+                            DrawLine_Player(Phase.aTargets[iTemp].Get_PositionX(), Phase.aTargets[iTemp].Get_PositionY());
                             break;
 
                         case 2:
                             iTemp = _Check.Check_SearchEnemy_First();
-                            DrawLine_Enemy(Phase.aTargets[iTemp].x, Phase.aTargets[iTemp].y);
+                            DrawLine_Enemy(Phase.aTargets[iTemp].Get_PositionX(), Phase.aTargets[iTemp].Get_PositionY());
                             break;
 
                         default:
@@ -105,9 +105,9 @@ namespace Project_GG
             {
                 // 플레이어 현재 패 보여주기
                 int iPlayer = _Check.Check_SearchPlayer();
-                Phase.aTargets[iPlayer].targetdeck.Shuffle_Draw();
-
                 Phase.aTargets[iPlayer].targetdeck.Show_Hand();
+
+                iBlank = _Limit.Limit(iBlank - Phase.aTargets[iPlayer].targetdeck.Count_Hand(),0,iBlank);
 
                 for (int i = 0; i < iBlank; i++) 
                 {

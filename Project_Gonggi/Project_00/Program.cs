@@ -11,7 +11,6 @@ namespace Project_GG
     {
         public static bool bLoop_MainGame = true;
         public static int iStart = 0;
-        //public int g_iTurn = 0;
 
         static void Main(string[] args)
         {

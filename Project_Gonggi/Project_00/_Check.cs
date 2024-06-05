@@ -9,6 +9,19 @@ namespace Project_GG
 {
     static public class _Check
     {
+        //
+        static public int Check_CMD_CardUse(int input)
+        {
+            int iPlayer = Check_SearchPlayer();
+            int iResult = 0;
+
+            // 명령에 해당하는 뽑을 카드가 존재하는가
+            if (input >= 0)
+                iResult = Phase.aTargets[iPlayer].targetdeck.Check_Draw(input);
+
+            return iResult;
+        }
+
         // 적 찾기
         static public int Check_SearchEnemy_First()
         {
@@ -16,7 +29,7 @@ namespace Project_GG
 
             for (int i = 0; i < Phase.aTargets.Length; i++)
             {
-                if (Phase.aTargets[i].iId > 0)
+                if (Phase.aTargets[i].Get_ID() > 0)
                 {
                     iResult = i;
                     break;
@@ -41,7 +54,7 @@ namespace Project_GG
 
             for (int i = 0; i < Phase.aTargets.Length; i++)
             {
-                if (Phase.aTargets[i].iId == 0)
+                if (Phase.aTargets[i].Get_ID() == 0)
                 {
                     iResult = i;
                     break;
@@ -59,7 +72,6 @@ namespace Project_GG
             }
         }
 
-
         // 좌표에 존재하는 대상
         static public int Check_TargetOnMap(int x, int y)
         {
@@ -68,19 +80,21 @@ namespace Project_GG
 
             // 플레이어 존재 좌표
             int iPlayer = _Check.Check_SearchPlayer();
-            if (Phase.aTargets[iPlayer].x == x && Phase.aTargets[iPlayer].y == y)
+            if (Phase.aTargets[iPlayer].Get_PositionX() == x && Phase.aTargets[iPlayer].Get_PositionY() == y)
             {
                 iResult = 1;
             }
 
             // 적
             int iEnemy = _Check.Check_SearchEnemy_First();
-            if (Phase.aTargets[iEnemy].x == x && Phase.aTargets[iEnemy].y == y)
+            if (Phase.aTargets[iEnemy].Get_PositionX() == x && Phase.aTargets[iEnemy].Get_PositionY() == y)
             {
-                iResult = 100 + Phase.aTargets[iEnemy].iId;
+                iResult = 100 + Phase.aTargets[iEnemy].Get_ID();
             }
 
             return iResult;
         }
+
+
     }
 }

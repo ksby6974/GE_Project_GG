@@ -19,6 +19,15 @@ namespace Project_GG
         {
             Phase.currentmap.Update();
 
+            if (Phase.g_battle == 0)
+            {
+                int iPlayer = _Check.Check_SearchPlayer();
+                Phase.aTargets[iPlayer].targetdeck.Reset_TurnFirst();
+                Phase.aTargets[iPlayer].targetdeck.Draw_Main(5);
+
+                Phase.g_battle += 1;
+            }
+
             switch (iStart)
             {
                 case 0:
@@ -39,7 +48,7 @@ namespace Project_GG
             if (iPlayer > -1)
             {
                 // 플레이어 위치
-                Phase.aTargets[iPlayer].Position(5, 9);
+                Phase.aTargets[iPlayer].Set_Position(5, 9);
             }
 
             // 적 생성
@@ -47,7 +56,7 @@ namespace Project_GG
             if (iEnemy > -1)
             {
                 // 적 위치
-                Phase.aTargets[iEnemy].Position(5, 2);
+                Phase.aTargets[iEnemy].Set_Position(5, 2);
             }
 
             // 적 위치

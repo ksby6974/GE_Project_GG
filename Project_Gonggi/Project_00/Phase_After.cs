@@ -33,7 +33,6 @@ namespace Project_GG
             // 차례 진행
             if (iTurn == 1)
                 Phase.g_iTurn += 1;
-            Phase.g_cmd = 0;
 
             // 버퍼 처리
             Console.Clear();

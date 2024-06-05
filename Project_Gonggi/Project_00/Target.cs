@@ -8,12 +8,12 @@ namespace Project_GG
 {
     public class Target
     {
-        public int iId;
-        public string sName = "defaultName";
-        public int x;
-        public int y;
+        protected int iId;
+        protected string sName = "defaultName";
+        protected int x;
+        protected int y;
         protected int iHpLimit;
-        public int iHp = 0;
+        protected int iHp = 0;
         public Deck targetdeck;
 
         public Target(int cf, int ihp)
@@ -24,11 +24,46 @@ namespace Project_GG
             targetdeck = new Deck();
         }
 
+        public void Set_HP(int hp)
+        {
+            this.iHp = hp;
+        }
 
-        public void Position(int x, int y)
+        public void Set_Position(int x, int y)
         {
             this.x = x;
             this.y = y;
+        }
+
+        public int Get_HP()
+        {
+            return this.iHp;
+        }
+
+        public int Get_HPLimit()
+        {
+            return this.iHpLimit;
+        }
+
+        public int Get_ID()
+        {
+            return this.iId;
+        }
+
+        public string Get_Name()
+        {
+            return this.sName;
+
+        }
+
+        public int Get_PositionX()
+        {
+            return this.x;
+        }
+
+        public int Get_PositionY()
+        {
+            return this.y;
         }
     }
 

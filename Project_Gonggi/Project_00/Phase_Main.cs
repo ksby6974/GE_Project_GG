@@ -17,11 +17,17 @@ namespace Project_GG
             Phase.currentmap.DrawMap();
             QuickDraw.DrawLine("Player", 1);
 
+            //
+
+
             // 명령 입력 UI
             CommandPhase(Phase.g_cmd);
 
             // 플레이어 입력
-            Phase.g_cmd = CommandAction(Phase.g_cmd);
+            int CorrectInput = CommandInput();
+
+            // 플레이어 명령수행
+            Phase.g_cmd = CommandAction(CorrectInput);
         }
 
         static public void CommandPhase(int iCmd)
@@ -36,59 +42,68 @@ namespace Project_GG
                     //int iResult = 0;
 
                     QuickDraw.DrawLine("Cmd", 2);
-                    Console.WriteLine($"[D] 덱 확인");
-                    Console.WriteLine($"[{2}] 맵 확인");
-                    Console.WriteLine($"[{3}] 대상 확인");
+                    Console.WriteLine($"[D] 현재 덱 확인");
+                    Console.WriteLine($"[Q] 뽑을 카드 뭉치 확인");
+                    Console.WriteLine($"[W] 버린 카드 뭉치 확인");
+                    Console.WriteLine($"[Space] 패를 버리고 카드를 새로 뽑습니다.");
                     break;
            }
         }
 
-        public int CommandAction(int iCmd)
+        static public int CommandInput()
         {
-            int iResult = 1;
+            //정수값만 받도록
+            int iResult = -1;
             int iPlayer = _Check.Check_SearchPlayer();
-            int iPx = Phase.aTargets[iPlayer].x;
-            int iPy = Phase.aTargets[iPlayer].y;
+            int i = 0;
+            string? s = Console.ReadLine();
 
-            ConsoleKeyInfo key;
-            key = Console.ReadKey(true);
-
-           
-            //if (iCmd == 0)
-            switch (key.Key)
+            if (s == "d" || s == "D")
+            {
+                Phase.aTargets[iPlayer].targetdeck.Show_Deck();
+            }
+            else if (s == "Q" || s == "q")
+            {
+                Phase.aTargets[iPlayer].targetdeck.Show_Draw();
+            }
+            else if (s == "W" || s == "w")
+            {
+                Phase.aTargets[iPlayer].targetdeck.Show_Discard();
+            }
+            else
             {
 
-                // 조작
-                case ConsoleKey.UpArrow:
-                    iResult = _Limit.Limit_PlayerPosition_CMD(iPx, iPy - 1);
-                    break;
+                bool bResult = int.TryParse(s, out i);
 
-                case ConsoleKey.DownArrow:
-                    iResult = _Limit.Limit_PlayerPosition_CMD(iPx, iPy + 1);
-                    break;
-
-                case ConsoleKey.LeftArrow:
-                    iResult = _Limit.Limit_PlayerPosition_CMD(iPx - 1, iPy);
-                    break;
-
-                case ConsoleKey.RightArrow:
-                    iResult = _Limit.Limit_PlayerPosition_CMD(iPx + 1, iPy);
-                    break;
-
-                // 
-                case ConsoleKey.D:
-                    Phase.g_cmd = 1;
-                    Phase.aTargets[iPlayer].targetdeck.Show_Deck();
-                    iResult = -1;
-                    break;
-
-                default:
-                    Console.WriteLine($"{key.Key}");
-                    iResult = -1;
-                    break;
+                if (bResult)
+                {
+                    //Console.WriteLine($"입력된 명령:{s}　결과:{bResult}　값:{int.Parse(s)}");
+                    iResult = int.Parse(s);
+                }
+                else
+                {
+                    //Console.WriteLine($"{s}");
+                }
             }
 
-            Console.WriteLine($"명령 반환:{iResult}, {key.Key}");
+            return iResult;
+        }
+
+        public int CommandAction(int input)
+        {
+            Console.WriteLine($"input:{input}　g_cmd:{Phase.g_cmd}");
+
+            int iResult = input;
+            int iDrawOn = _Check.Check_CMD_CardUse(input); 
+
+            //명령 수행 실패
+            // ※ 할당된 뽑을 카드 없음
+            // ※ 할당되었으나 카드 사용할 수 없음
+            if (iDrawOn == 0)
+            {
+                iResult = -1;
+            }
+
             return iResult;
         }
     }
