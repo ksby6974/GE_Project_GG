@@ -27,3 +27,5 @@ C:\Users\Administrator\Desktop\GE_Project_GG\Project_Gonggi\Project_00\obj\Debug
 C:\Users\Administrator\Desktop\GE_Project_GG\Project_Gonggi\Project_00\obj\Debug\net6.0\Project_GG.pdb
 C:\Users\Administrator\Desktop\GE_Project_GG\Project_Gonggi\Project_00\obj\Debug\net6.0\Project_GG.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\GE_Project_GG\Project_Gonggi\Project_00\obj\Debug\net6.0\ref\Project_GG.dll
+C:\Users\Administrator\Desktop\GE_Project_GG\Project_Gonggi\Project_00\obj\Debug\net6.0\Project_GG.DoubleBufferPanel.resources
+C:\Users\Administrator\Desktop\GE_Project_GG\Project_Gonggi\Project_00\obj\Debug\net6.0\Project_GG.csproj.GenerateResource.cache

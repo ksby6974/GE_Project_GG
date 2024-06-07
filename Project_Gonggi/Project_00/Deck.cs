@@ -44,18 +44,6 @@ namespace Project_GG
             }
         }
 
-        // 메인 드로우
-        public void Draw_Main(int Cards = 0)
-        {
-            if (Cards > 0)
-            {
-                for (int i = 0; i < Cards; i++)
-                {
-                    Set_Draw();
-                }
-            }
-        }
-
         // 덱에 추가
         public void Add_Deck(int iCard)
         {
@@ -108,7 +96,6 @@ namespace Project_GG
             }
 
             return iResult;
-
         }
 
         // 버릴 카드 더미의 카드 총합
@@ -133,7 +120,7 @@ namespace Project_GG
         {
             int iResult = 0;
 
-            for (int i = 0; i < aList_Draw.Length;  i++)
+            for (int i = 0; i < aList_Draw.Length; i++)
             {
                 if (aList_Draw[i] != null)
                 {
@@ -141,7 +128,7 @@ namespace Project_GG
                 }
             }
 
-             return iResult;
+            return iResult;
         }
 
         // 패의 카드 총합
@@ -160,6 +147,60 @@ namespace Project_GG
             return iResult;
         }
 
+        // 카드 뽑기
+        public void Draw_()
+        {
+            int iResult = 0;
+
+            for (int i = 0; i < aList_Draw.Length; i++)
+            {
+                // 뽑을 카드 더미에 카드 존재
+                if (aList_Draw[i] != null)
+                {
+                    for (int j = 0; j < aList_Hand.Length; j++)
+                    {
+                        // 비어있는 뽑은 카드 더미에 할당
+                        if (iResult == 0 && aList_Hand[j] == null)
+                        {
+                            aList_Hand[j] = aList_Draw[i];
+                            iResult = 1;
+                            break;
+                        }
+                    }
+                }
+
+                if (iResult == 1 && aList_Draw[i] != null)
+                {
+                    if (i + 1 < aList_Draw.Length)
+                    {
+                        aList_Draw[i] = aList_Draw[i + 1];
+                    }
+                    else
+                    {
+                        aList_Draw[i] = null;
+                    }
+                }
+            }
+
+            if (iResult == 0)
+            {
+                Console.WriteLine($"뽑을 카드가 없다.");
+            }
+        }
+
+
+        // 메인 드로우
+        public void Draw_Main(int Cards = 0)
+        {
+            if (Cards > 0)
+            {
+                for (int i = 0; i < Cards; i++)
+                {
+                    Draw_();
+                }
+            }
+        }
+
         // 덱 초기화
         public void InitDeck()
         {
@@ -171,6 +212,40 @@ namespace Project_GG
                 else
                 {
                     aList_Deck[0] = null;
+                }
+            }
+        }
+
+        // 패 버리기
+        public void Discard_Hand(int ihandnumber)
+        {
+            //aList_Hand[ihandnumber] != null
+            int iIndex = -1;
+
+            for (int i = 0; i < aList_Discard.Length; i++)
+            {
+                if (aList_Discard[i] == null)
+                {
+                    iIndex = i;
+
+                    aList_Discard[iIndex] = aList_Hand[ihandnumber];
+                    aList_Hand[ihandnumber] = null;
+                    break;
+                }
+            }
+
+            if (iIndex == -1)
+                Console.WriteLine("해당 카드를 버릴 공간 없음");
+        }
+
+        // 패 모두 버리기
+        public void Discard_Hand_All()
+        {
+            for (int i = 0; i < aList_Hand.Length; i++)
+            {
+                if (aList_Hand[i] != null)
+                {
+                    Discard_Hand(i);
                 }
             }
         }
@@ -230,47 +305,6 @@ namespace Project_GG
             }
         }
 
-        // 카드 뽑기
-        public void Set_Draw()
-        {
-            int iResult = 0;
-
-            for (int i = 0; i < aList_Draw.Length; i++)
-            {
-                // 뽑을 카드 더미에 카드 존재
-                if (aList_Draw[i] != null)
-                {
-                    for (int j = 0; j < aList_Hand.Length; j++)
-                    {
-                        // 비어있는 뽑은 카드 더미에 할당
-                        if (iResult == 0 && aList_Hand[j] == null)
-                        {
-                            aList_Hand[j] = aList_Draw[i];
-                            iResult = 1;
-                            break;
-                        }
-                    }
-                } 
-
-                if (iResult == 1 && aList_Draw[i] != null)
-                {
-                    if (i + 1 < aList_Draw.Length)
-                    {
-                        aList_Draw[i] = aList_Draw[i + 1];
-                    }
-                    else
-                    {
-                        aList_Draw[i] = null;
-                    }
-                }
-            }
-
-            if (iResult == 0)
-            {
-                Console.WriteLine($"뽑을 카드가 없다.");
-            }
-        }
-
         // 덱을 뽑을 카드 더미에 할당
         public void Set_Start()
         {
@@ -293,7 +327,7 @@ namespace Project_GG
         // 덱 확인
         public void Show_Deck()
         {
-            QuickDraw.DrawLine("None", 2);
+            _Draw.DrawLine("None", 2);
 
             for (int i = 0; i < aList_Deck.Length; i++)
             {
@@ -310,10 +344,10 @@ namespace Project_GG
             }
         }
 
-        // 버린 더미 보기
+        // 버린 더미 확인
         public void Show_Discard()
         {
-            QuickDraw.DrawLine("None", 2);
+            _Draw.DrawLine("None", 2);
 
             for (int i = 0; i < aList_Discard.Length; i++)
             {
@@ -331,10 +365,10 @@ namespace Project_GG
 
         }
 
-        // 뽑을 더미 보기
+        // 뽑을 더미 확인
         public void Show_Draw()
         {
-            QuickDraw.DrawLine("None", 2);
+            _Draw.DrawLine("None", 2);
 
             for (int i = 0; i < aList_Draw.Length; i++)
             {
@@ -351,10 +385,10 @@ namespace Project_GG
             }
         }
 
-        // 손패 보기
+        // 손패 확인
         public void Show_Hand()
         {
-            QuickDraw.DrawLine("None", 2);
+            _Draw.DrawLine("Hand", 2);
             Console.WriteLine($"[0] : 차례 강제 종료");
 
             for (int i = 0; i < aList_Hand.Length; i++)
@@ -372,7 +406,7 @@ namespace Project_GG
 
         }
 
-        // 뽑을 카드 더미 섞기
+        // 뽑을 더미 섞기
         public void Shuffle_Draw()
         {
             int iLimit = Count_Draw();

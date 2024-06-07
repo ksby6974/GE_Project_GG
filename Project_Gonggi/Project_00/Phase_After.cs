@@ -21,8 +21,13 @@ namespace Project_GG
             // 초기화 및 흐름
             switch (Phase.g_cmd)
             {
-                //차례 진행되지 않음
+                //명령 재시도
                 case -1:
+                    iTurn = 0;
+                    break;
+
+                // 플레이어 정보 확인
+                case -2:
                     iTurn = 0;
                     break;
 
@@ -31,7 +36,7 @@ namespace Project_GG
             }
 
             // 차례 진행
-            if (iTurn == 1)
+            if (iTurn >= 1)
                 Phase.g_iTurn += 1;
 
             // 버퍼 처리

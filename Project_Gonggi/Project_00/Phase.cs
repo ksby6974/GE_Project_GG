@@ -13,6 +13,9 @@ namespace Project_GG
         static public int g_iTurn = 0;
         static public int g_cmd = 0;
 
+        //버퍼
+        static public DoubleBufferPanel Gamebuffer;
+
         // 페이즈
         public Phase_Before phase_bf;
         public Phase_Main phase_main;
@@ -33,6 +36,7 @@ namespace Project_GG
             phase_bf = new Phase_Before();
             phase_main = new Phase_Main();
             phase_af = new Phase_After();
+            Gamebuffer = new DoubleBufferPanel();
         }
 
         // id = 분류

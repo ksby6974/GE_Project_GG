@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using Project_GG;
 
 namespace Project_GG
@@ -21,7 +22,7 @@ namespace Project_GG
             Phase phase = new Phase();
 
             while (bLoop_MainGame)
-            {  
+            {
                 // 【비포 페이즈】
                 phase.phase_bf.Update(iStart);
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,8 +22,8 @@ namespace Project_GG
         public const int g_Limit_WindowHeight = 44;
 
         // 글자색
-        public const int g_Limit_Color_Player = (int)ConsoleColor.Red;
-        public const int g_Limit_Color_Enemy = (int)ConsoleColor.Green;
+        public const int g_Limit_Color_Player = (int)ConsoleColor.Green;
+        public const int g_Limit_Color_Enemy = (int)ConsoleColor.Red;
 
         // 범위 제한
         static public int Limit(int value, int min, int max)
@@ -47,10 +48,10 @@ namespace Project_GG
             int iResult = 1;
 
             // 화면 밖
-            if (x > _Limit.g_Limit_Position || x < 0)
+            if (x + 1 > _Limit.g_Limit_Position || x < 0)
                 iResult = 0;
 
-            if (y > _Limit.g_Limit_Position || y < 0)
+            if (y + 1 > _Limit.g_Limit_Position || y < 0)
                 iResult = 0;
 
             // 적 존재
@@ -73,6 +74,13 @@ namespace Project_GG
             {
                 iResult = -1;
             }
+
+            return iResult;
+        }
+
+        static public int Get_MainDraw(int draws)
+        {
+            int iResult = 5 + draws;
 
             return iResult;
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project_GG
 {
-    static class QuickDraw
+    static class _Draw
     {
         static public void DrawLine(string sValue = "default", int iValue = 0, int iTurn = 0)
         {
@@ -16,10 +16,14 @@ namespace Project_GG
 
             switch (sValue)
             {
-                case "Cmd":
-                    iWho = -2;
+                case "Hand":
+                    iWho = -3;
 
                     break;
+                case "Cmd":
+                    iWho = -2;
+                    break;
+
                 case "Turn":
                     iWho = -1;
                     break;
@@ -72,6 +76,10 @@ namespace Project_GG
                 {
                     switch (iWho)
                     {
+                        case -3:
+                            DrawLine_Hand();
+                            break;
+
                         case -2:
                             DrawLine_Cmd();
                             break;
@@ -103,8 +111,12 @@ namespace Project_GG
             // 자신의 상태창
             if (iWho == 1)
             {
-                // 플레이어 현재 패 보여주기
                 int iPlayer = _Check.Check_SearchPlayer();
+
+                // 상태창
+                Draw_Target_Stat(Phase.aTargets[iPlayer]);
+
+                // 플레이어 현재 패 보여주기
                 Phase.aTargets[iPlayer].targetdeck.Show_Hand();
 
                 iBlank = _Limit.Limit(iBlank - Phase.aTargets[iPlayer].targetdeck.Count_Hand(),0,iBlank);
@@ -136,16 +148,16 @@ namespace Project_GG
 
             switch (Phase.g_cmd)
             {
+                case -2:
+                    sShow = "플레이어 정보 확인";
+                    break;
+
                 case -1:
                     sShow = "명령 재시도 부여";
-
-                    break;
-                case 0:
-                    sShow = "플레이어 명령 대기중";
                     break;
 
                 case 1:
-                    sShow = "플레이어 덱 확인중";
+                    sShow = "플레이어 차례 소모";
                     break;
 
                 default:
@@ -159,6 +171,47 @@ namespace Project_GG
         static public void DrawLine_Cmd()
         {
             Console.Write($"【 Cmd 】");
+        }
+
+        static public void DrawLine_Hand()
+        {
+            Console.Write($"【 Hand 】");
+
+        }
+        static public void Draw_Target_Stat(Target target)
+        {
+            string name = target.Get_Name();
+            double hp = Convert.ToDouble(target.Get_HP());
+            double hpLimit = Convert.ToDouble(target.Get_HPLimit());
+
+            //컬러
+            if (name == "Player")
+            {
+                _Set.SetTextColor("Player");
+            }
+            else
+            {
+                _Set.SetTextColor("Enemy");
+            }
+
+            //Star
+            Console.Write($"{name}");
+
+            double hp_bar = Getpercentage(hp,hpLimit,2);
+            int iLimit = _Limit.Limit(Convert.ToInt32(hp_bar), 0, 100);
+
+            //Console.Write($"{hp_bar}");
+
+            Console.Write($"（{hp,3}／{hpLimit,3}）");
+
+            Console.ResetColor();
+
+            Console.WriteLine();
+        }
+
+        static double Getpercentage(double value, double total, int de)
+        {
+            return System.Math.Round(value * 100 / total, de);
         }
     }
 }
