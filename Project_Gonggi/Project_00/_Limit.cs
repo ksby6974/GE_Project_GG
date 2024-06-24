@@ -64,7 +64,7 @@ namespace Project_GG
         // 플레이어 위치 제한
         static public int Limit_PlayerPosition_CMD(int x, int y)
         {
-            int iResult = 1;
+            int iResult = 0;
 
             if (_Limit.Limit_PlayerPosition(x, y) == 1)
             {

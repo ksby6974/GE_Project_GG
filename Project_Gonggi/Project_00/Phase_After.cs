@@ -21,7 +21,7 @@ namespace Project_GG
             // 초기화 및 흐름
             switch (Phase.g_cmd)
             {
-                //명령 재시도
+                //명령 재시도 요구
                 case -1:
                     iTurn = 0;
                     break;

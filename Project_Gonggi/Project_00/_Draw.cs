@@ -156,6 +156,10 @@ namespace Project_GG
                     sShow = "명령 재시도 부여";
                     break;
 
+                case 0:
+                    sShow = "차례는 소모되는 행동";
+                    break;
+
                 case 1:
                     sShow = "플레이어 차례 소모";
                     break;

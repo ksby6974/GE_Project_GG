@@ -43,20 +43,28 @@ namespace Project_GG
 
                 switch (i)
                 {
+                    case 3:
+                        Console.Write($"\t [↑, →, ←, ↓] 이동");
+                        break;
+
                     case 4:
-                        Console.Write($"\t [↑] 이동");
+                        Console.Write($"\t [D] 현재 덱 확인");
                         break;
 
                     case 5:
-                        Console.Write($"\t [→] 이동");
+                        Console.Write($"\t [Q] 뽑을 카드 뭉치 확인");
                         break;
 
                     case 6:
-                        Console.Write($"\t [←] 이동");
+                        Console.Write($"\t [W] 버린 카드 뭉치 확인");
                         break;
 
                     case 7:
-                        Console.Write($"\t [↓] 이동");
+                        Console.Write($"\t [R] 패를 모두 버리고 카드를 새로 뽑습니다.");
+                        break;
+
+                    case 8:
+                        Console.Write($"\t [A] 패에 있는 카드를 사용합니다.");
                         break;
 
                     default:

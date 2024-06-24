@@ -37,7 +37,7 @@ namespace Project_GG
                 else
                 {
                     Console.WriteLine($"{i} 존재");
-                    aList_Deck[0] = null;
+                    aList_Deck[0] = null!;
 
                     Console.WriteLine($"{i} 를 파괴 {aList_Deck[0]}");
                 }
@@ -67,17 +67,35 @@ namespace Project_GG
             }
         }
 
-        public int Check_Draw(int iIndex)
+        public int Check_Draw()
+        {
+            int iResult = -1;
+
+            for (int i = 0; i < aList_Draw.Length; i++)
+            {
+                if (aList_Draw[i] != null)
+                {
+                    iResult = i;
+                    break;
+                }
+            }
+
+            return iResult;
+        }
+
+        public int Check_Hand(int iIndex)
         {
             int iResult = 0;
 
-            if (iIndex < aList_Draw.Length)
+            if (iIndex < aList_Hand.Length)
             {
-                if (aList_Draw[iIndex] != null)
+                if (aList_Hand[iIndex - 1] != null)
                 {
                     iResult = 1;
                 }
             }
+            //Console.WriteLine($"길이:{aList_Hand[iIndex - 1]} {aList_Hand.Length} 값:{aList_Hand[iIndex - 1].Get_ID()}");
+            //Console.WriteLine($"Check_Hand : {iIndex} 점검한 결과는 {iResult}");
 
             return iResult;
         }
@@ -151,43 +169,41 @@ namespace Project_GG
         public void Draw_()
         {
             int iResult = 0;
+            int iDraw = -1;
 
-            for (int i = 0; i < aList_Draw.Length; i++)
+            // 뽑을 카드 더미 검사 
+            iDraw = Check_Draw();
+
+            // 더 이상 뽑을 카드가 없었음
+            if (iDraw == -1)
             {
-                // 뽑을 카드 더미에 카드 존재
-                if (aList_Draw[i] != null)
-                {
-                    for (int j = 0; j < aList_Hand.Length; j++)
-                    {
-                        // 비어있는 뽑은 카드 더미에 할당
-                        if (iResult == 0 && aList_Hand[j] == null)
-                        {
-                            aList_Hand[j] = aList_Draw[i];
-                            iResult = 1;
-                            break;
-                        }
-                    }
-                }
+                Set_Circle();
 
-                if (iResult == 1 && aList_Draw[i] != null)
+                iDraw = Check_Draw();
+
+                // 그래도 더 이상 뽑을 카드가 없음
+                if (iDraw == -1)
                 {
-                    if (i + 1 < aList_Draw.Length)
-                    {
-                        aList_Draw[i] = aList_Draw[i + 1];
-                    }
-                    else
-                    {
-                        aList_Draw[i] = null;
-                    }
+                    Console.WriteLine($"뽑을 카드가 없다.");
+                    return;
                 }
             }
 
-            if (iResult == 0)
+            // 핸드 검사
+            for (int j = 0; j < aList_Hand.Length; j++)
             {
-                Console.WriteLine($"뽑을 카드가 없다.");
+                // 비어있는 뽑은 카드 더미에 할당
+                if (iResult == 0 && aList_Hand[j] == null)
+                {
+                    iResult = 1;
+                    aList_Hand[j] = aList_Draw[iDraw];
+                    break;
+                }
             }
+
+            // 뽑을 카드 더미 Sort
+            Sort_Hand();
         }
-
 
         // 메인 드로우
         public void Draw_Main(int Cards = 0)
@@ -211,7 +227,7 @@ namespace Project_GG
                 }
                 else
                 {
-                    aList_Deck[0] = null;
+                    aList_Deck[0] = null!;
                 }
             }
         }
@@ -219,23 +235,23 @@ namespace Project_GG
         // 패 버리기
         public void Discard_Hand(int ihandnumber)
         {
-            //aList_Hand[ihandnumber] != null
-            int iIndex = -1;
+            int iResult = -1;
+            int iIndex = ihandnumber - 1;
 
             for (int i = 0; i < aList_Discard.Length; i++)
             {
                 if (aList_Discard[i] == null)
                 {
-                    iIndex = i;
-
-                    aList_Discard[iIndex] = aList_Hand[ihandnumber];
-                    aList_Hand[ihandnumber] = null;
+                    //Console.WriteLine($"{aList_Hand[ihandnumber].Get_Name()} {aList_Hand[ihandnumber].Get_ID()}를 버립니다.");
+                    iResult = i;
+                    aList_Discard[i] = aList_Hand[iIndex];
+                    aList_Hand[iIndex] = null!;        
                     break;
                 }
             }
 
-            if (iIndex == -1)
-                Console.WriteLine("해당 카드를 버릴 공간 없음");
+            if (iResult == -1)
+                Console.WriteLine("Discard_Hand : 카드를 버릴 공간 없음");
         }
 
         // 패 모두 버리기
@@ -245,7 +261,7 @@ namespace Project_GG
             {
                 if (aList_Hand[i] != null)
                 {
-                    Discard_Hand(i);
+                    Discard_Hand(i + 1);
                 }
             }
         }
@@ -255,7 +271,7 @@ namespace Project_GG
         {
             for (int i = 0; i < aList_Discard.Length; i++)
             {
-                aList_Discard[i] = null;
+                aList_Discard[i] = null!;
             }
         }
 
@@ -264,7 +280,7 @@ namespace Project_GG
         {
             for (int i = 0; i < aList_Draw.Length; i++)
             {
-                aList_Draw[i] = null;
+                aList_Draw[i] = null!;
             }
         }
 
@@ -273,7 +289,7 @@ namespace Project_GG
         {
             for (int i = 0; i < aList_Hand.Length; i++)
             {
-                aList_Hand[i] = null;
+                aList_Hand[i] = null!;
             }
         }
 
@@ -286,6 +302,8 @@ namespace Project_GG
         // 덱 순환
         public void Set_Circle()
         {
+            Console.WriteLine($"Player Deck is circulated");
+
             for (int i = 0; i < aList_Discard.Length; i++)
             {
                 // 버린 카드 더미에 카드 존재
@@ -297,7 +315,7 @@ namespace Project_GG
                         if (aList_Draw[j] == null)
                         {
                             aList_Draw[j] = aList_Discard[i];
-                            aList_Discard[i] = null;
+                            aList_Discard[i] = null!;
                             break;
                         }
                     }
@@ -404,6 +422,34 @@ namespace Project_GG
                 }
             }
 
+        }
+
+        // 손패 재정렬
+        public void Sort_Hand()
+        {
+            int iTemp = -1;
+            Card cTemp = new Card();
+
+            for (int i = 0; i < aList_Hand.Length; i++)
+            {
+                if (aList_Hand[i] == null)
+                {
+                    if (iTemp == -1)
+                    {
+                        iTemp = i;
+                    }
+                    //aList_Hand[i] = null;
+                }
+                else
+                {
+                    if (iTemp >= 0)
+                    {
+                        aList_Hand[iTemp] = aList_Hand[i];
+                        aList_Hand[i] = null!;
+                        iTemp = -1;
+                    }
+                }
+            }
         }
 
         // 뽑을 더미 섞기

@@ -29,25 +29,19 @@ namespace Project_GG
 
             // 플레이어 명령수행
             Phase.g_cmd = CommandAction(CorrectInput);
+
+            // 차례 진행
+
+            // 환경 행동
+
+            // 적의 행동
         }
 
         static public void CommandPhase(int iCmd)
         {
             switch (iCmd)
             {
-                // 덱 확인
-                case -2:
-                    break;
-
                 default:
-                    //int iResult = 0;
-
-                    _Draw.DrawLine("Cmd", 2);
-                    Console.WriteLine($"[D] 현재 덱 확인");
-                    Console.WriteLine($"[Q] 뽑을 카드 뭉치 확인");
-                    Console.WriteLine($"[W] 버린 카드 뭉치 확인");
-                    Console.WriteLine($"[R] 패를 모두 버리고 카드를 새로 뽑습니다.");
-                    Console.WriteLine($"[A] 패에 있는 카드를 사용합니다.");
                     break;
            }
         }
@@ -97,7 +91,7 @@ namespace Project_GG
                     break;
 
                 case ConsoleKey.R:
-                    iResult = 1;
+                    iResult = 0;
                     Phase.aTargets[iPlayer].targetdeck.Discard_Hand_All();
                     Phase.aTargets[iPlayer].targetdeck.Draw_Main(5);
                     //_Limit.Get_MainDraw()
@@ -105,19 +99,25 @@ namespace Project_GG
                     break;
 
                 case ConsoleKey.A:
+                    Console.Write($"사용할 카드의 번호 : ");
+
                     int i = 0;
                     string? s = Console.ReadLine();
                     bool bResult = int.TryParse(s, out i);
 
                     if (bResult)
                     {
-                        //Console.WriteLine($"입력된 명령:{s}　결과:{bResult}　값:{int.Parse(s)}");
+                        Console.WriteLine($"입력된 명령:{s}　결과:{bResult}　값:{int.Parse(s!)}");
                         iResult = int.Parse(s);
                     }
                     else
                     {
-                        //Console.WriteLine($"{s}");
+                        Console.WriteLine($"잘못된 입력입니다.");
                     }
+
+                    if (iResult == 0)
+                        iResult = 0;
+
                     break;
 
                 default:
@@ -132,18 +132,19 @@ namespace Project_GG
             Console.WriteLine($"input:{input}　g_cmd:{Phase.g_cmd}");
 
             int iResult = input;
-            int iDrawOn = _Check.Check_CMD_CardUse(input); 
 
-            //명령 수행 실패
-            // ※ 할당된 뽑을 카드 없음
-            // ※ 할당되었으나 카드 사용할 수 없음
-            if (iDrawOn == 0)
+            // 카드 사용 처리
+            if (input > 0)
             {
-                iResult = -1;
-            }
-            else
-            {
-                Use_Card(iResult);
+                //카드 사용 가능 여부
+                if (_Check.Check_CMD_CardUse(input) == 0)
+                {
+                    iResult = -1;
+                }
+                else
+                {
+                    Use_Card(iResult);
+                }
             }
 
             return iResult;
@@ -151,6 +152,9 @@ namespace Project_GG
 
         public void Use_Card(int iCard)
         {
+            // 해당 버리기
+            Phase.aTargets[_Check.Check_SearchPlayer()].targetdeck.Discard_Hand(iCard);
+
             Console.WriteLine($"카드가 사용되었습니다. : {iCard}");
         }
     }

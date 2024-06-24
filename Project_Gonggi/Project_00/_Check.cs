@@ -15,9 +15,15 @@ namespace Project_GG
             int iPlayer = Check_SearchPlayer();
             int iResult = 0;
 
-            // 명령에 해당하는 뽑을 카드가 존재하는가
-            if (input >= 0)
-                iResult = Phase.aTargets[iPlayer].targetdeck.Check_Draw(input);
+            // 명령에 해당하는 손패에 존재하는가
+            iResult = Phase.aTargets[iPlayer].targetdeck.Check_Hand(input);
+
+            // ※ 할당된 뽑을 카드 없음
+            if (iResult == 0)
+            {
+                Console.WriteLine($"해당 번호에 할당된 카드가 없습니다.");
+            }
+            // ※ 할당되었으나 카드 사용할 수 없음
 
             return iResult;
         }
