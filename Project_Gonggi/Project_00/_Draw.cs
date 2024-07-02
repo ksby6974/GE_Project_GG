@@ -9,6 +9,14 @@ namespace Project_GG
 {
     static class _Draw
     {
+        static public void ClearLine()
+        {
+            string s = "\r";
+            s += new string(' ', Console.CursorLeft);
+            s += "\r";
+            Console.Write(s);
+        }
+
         static public void DrawLine(string sValue = "default", int iValue = 0, int iTurn = 0)
         {
             int iBlank = _Limit.g_Limit_Blank;

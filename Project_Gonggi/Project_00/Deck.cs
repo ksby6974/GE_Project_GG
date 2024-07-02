@@ -76,6 +76,7 @@ namespace Project_GG
                 if (aList_Draw[i] != null)
                 {
                     iResult = i;
+                    //Console.WriteLine($"뽑을 카드 존재 {i}");
                     break;
                 }
             }
@@ -197,11 +198,12 @@ namespace Project_GG
                 {
                     iResult = 1;
                     aList_Hand[j] = aList_Draw[iDraw];
+                    aList_Draw[iDraw] = null!;
                     break;
                 }
             }
 
-            // 뽑을 카드 더미 Sort
+            // 손패 정렬
             Sort_Hand();
         }
 
@@ -396,10 +398,6 @@ namespace Project_GG
                     //Console.WriteLine($"[{i + 1}] : {aList_Draw[i].iCard}");
                     Console.WriteLine($"[{i + 1}] : {aList_Draw[i].Get_Name()}（{aList_Draw[i].Get_ID()}）");
                 }
-                else
-                {
-                    break;
-                }
             }
         }
 
@@ -442,11 +440,11 @@ namespace Project_GG
                 }
                 else
                 {
-                    if (iTemp >= 0)
+                    if (iTemp > -1)
                     {
                         aList_Hand[iTemp] = aList_Hand[i];
                         aList_Hand[i] = null!;
-                        iTemp = -1;
+                        iTemp = i;
                     }
                 }
             }
@@ -475,13 +473,6 @@ namespace Project_GG
             switch (Starter)
             {
                 default:
-                    Add_Deck(3);
-                    Add_Deck(3);
-                    Add_Deck(3);
-                    Add_Deck(3);
-                    Add_Deck(3);
-                    Add_Deck(3);
-
                     Add_Deck(1);
                     Add_Deck(1);
                     Add_Deck(1);
@@ -489,6 +480,11 @@ namespace Project_GG
 
                     Add_Deck(2);
                     Add_Deck(2);
+
+                    Add_Deck(3);
+                    Add_Deck(3);
+                    Add_Deck(3);
+                    Add_Deck(3);
                     break;
             }
         }

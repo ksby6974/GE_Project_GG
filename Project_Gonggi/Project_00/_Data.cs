@@ -41,8 +41,8 @@ namespace Project_GG
                     sName = "Defense";
                     break;
 
-                case (int)CardName.Moving:
-                    sName = "Moving";
+                case (int)CardName.TrickShot:
+                    sName = "TrickShot";
                     break;
 
                 default:

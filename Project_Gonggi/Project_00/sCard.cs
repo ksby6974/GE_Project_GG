@@ -13,7 +13,7 @@ namespace Project_GG
     {
         [Description("Blank")] Blank,
         [Description ("Straight Shot")] StraightShot,
+        [Description("Trick Shot")] TrickShot,
         [Description("Defense")] Defense,
-        [Description("Moving")] Moving,
     }
 }
