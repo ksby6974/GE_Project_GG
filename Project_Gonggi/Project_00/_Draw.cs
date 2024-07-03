@@ -17,6 +17,30 @@ namespace Project_GG
             Console.Write(s);
         }
 
+        static public void ColoredText(string sColor, string sString)
+        {
+            switch (sColor)
+            {
+                case "Red":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+
+                case "DarkRed":
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    break;
+
+                case "Blue":
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+
+                default:
+                    break;
+            }
+
+            Console.WriteLine($"{sString}");
+            Console.ResetColor();
+        }
+
         static public void DrawLine(string sValue = "default", int iValue = 0, int iTurn = 0)
         {
             int iBlank = _Limit.g_Limit_Blank;
