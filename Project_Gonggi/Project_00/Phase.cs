@@ -27,6 +27,9 @@ namespace Project_GG
         // 대상
         static public Target[] aTargets = new Target[_Limit.g_Limit_Target];
 
+        // 물체
+        Entity aEntity = new Entity();
+
         // 생성자
         public Phase()
         {
@@ -37,6 +40,11 @@ namespace Project_GG
             phase_main = new Phase_Main();
             phase_af = new Phase_After();
             Gamebuffer = new DoubleBufferPanel();
+        }
+
+        public void CreateEntity(int iMaster = 0)
+        {
+            aEntity.Create();
         }
 
         // id = 분류

@@ -164,6 +164,10 @@ namespace Project_GG
 
         public void Use_Card(int iCard)
         {
+            // 카드 사용 효과
+            Card cTemp = Phase.aTargets[_Check.Check_SearchPlayer()].targetdeck.GetCard_Hand(iCard);
+            cTemp.Use();
+
             // 해당 버리기
             Phase.aTargets[_Check.Check_SearchPlayer()].targetdeck.Discard_Hand(iCard);
 

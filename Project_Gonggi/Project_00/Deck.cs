@@ -166,6 +166,18 @@ namespace Project_GG
             return iResult;
         }
 
+        public Card GetCard_Hand(int iCard)
+        {
+            Card card = null!;
+
+            if (aList_Hand[iCard - 1] != null)
+            {
+                card = aList_Hand[iCard - 1];
+            }
+
+            return card;
+        }
+
         // 카드 뽑기
         public void Draw_()
         {
@@ -219,21 +231,6 @@ namespace Project_GG
             }
         }
 
-        // 덱 초기화
-        public void InitDeck()
-        {
-            for (int i = 0; i < aList_Deck.Length; i++)
-            {
-                if (aList_Deck[i] == null)
-                {
-                }
-                else
-                {
-                    aList_Deck[0] = null!;
-                }
-            }
-        }
-
         // 패 버리기
         public void Discard_Hand(int ihandnumber)
         {
@@ -268,6 +265,21 @@ namespace Project_GG
             }
         }
 
+        // 덱 초기화
+        public void InitDeck()
+        {
+            for (int i = 0; i < aList_Deck.Length; i++)
+            {
+                if (aList_Deck[i] == null)
+                {
+                }
+                else
+                {
+                    aList_Deck[0] = null!;
+                }
+            }
+        }
+
         // 초기화 : 버린 카드 더미
         public void Reset_Discard()
         {
@@ -295,6 +307,7 @@ namespace Project_GG
             }
         }
 
+        // 첫 차례
         public void Reset_TurnFirst()
         {
             Set_Start();

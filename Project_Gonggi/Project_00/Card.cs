@@ -10,17 +10,19 @@ namespace Project_GG
     public class Card
     {
         // 카드 생성 순서
-        protected string sName;
-        protected int iId;
-        protected int iAtk;
-        protected int iDef;
-        protected int iFreeMove;
-        protected int iShotType;
+        protected string sName;     // 이름
+        protected int iMaster;      // 주인
+        protected int iId;          // 분류
+        protected int iAtk;         // 공격
+        protected int iDef;         // 방어
+        protected int iFreeMove;    // 이동
+        protected int iShotType;    // 공격
 
         // 효과
 
         public Card(int id = 0)
         {
+            sName = "Blank";
             InitCard(id);
         }
 
@@ -37,6 +39,7 @@ namespace Project_GG
         public void InitCard(int id)
         {
             Set_Name(id);
+            this.iMaster = 0;
             this.iId = id;
             this.iAtk = 0;
             this.iDef = 0;
@@ -49,6 +52,17 @@ namespace Project_GG
             string s = _Data.Data_CardName(id);
             this.sName = s;
         }
+
+        public void Use()
+        {
+            Console.WriteLine($"{Get_ID()}:{Get_Name()}");
+
+            // 엔티티 생성
+            if (iShotType > 0)
+            {
+
+            }
+        }
     }
 
     public class StraightShot : Card
@@ -56,7 +70,7 @@ namespace Project_GG
         public StraightShot(int id) : base(id)
         {
             sName = "StraightShot";
-            iShotType = 0;
+            iShotType = 1;
         }
     }
 }

@@ -3,44 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\phase_after.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\phase_after.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\_entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\_entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\phase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\phase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\phase_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\phase_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\phase_before.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\phase_before.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\_draw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\_draw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\_limit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\_limit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\_set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\_set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\scard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\scard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\_limit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\_limit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\phase_before.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\phase_before.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\phase_after.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\phase_after.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\_set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\_set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\_draw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\_draw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|solutionrelative:project_00\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6670A900-41DF-48C5-A85A-AE7F587155CC}|Project_00\\Project_GG.csproj|c:\\users\\administrator\\desktop\\ge_project_gg\\project_gonggi\\project_00\\_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,65 +70,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Phase_Before.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Phase_Before.cs",
               "RelativeDocumentMoniker": "Project_00\\Phase_Before.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Phase_Before.cs",
               "RelativeToolTip": "Project_00\\Phase_Before.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T03:50:05.222Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Phase_Main.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Phase_Main.cs",
               "RelativeDocumentMoniker": "Project_00\\Phase_Main.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Phase_Main.cs",
               "RelativeToolTip": "Project_00\\Phase_Main.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAUAAAA",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAAIAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T03:50:48.473Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Target.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Target.cs",
+              "RelativeDocumentMoniker": "Project_00\\Target.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Target.cs",
+              "RelativeToolTip": "Project_00\\Target.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAA8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T06:10:32.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Phase.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Phase.cs",
+              "RelativeDocumentMoniker": "Project_00\\Phase.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Phase.cs",
+              "RelativeToolTip": "Project_00\\Phase.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAnwB4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T05:19:10.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "sCard.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\sCard.cs",
+              "RelativeDocumentMoniker": "Project_00\\sCard.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\sCard.cs",
+              "RelativeToolTip": "Project_00\\sCard.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T05:47:59.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Card.cs",
+              "RelativeDocumentMoniker": "Project_00\\Card.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Card.cs",
+              "RelativeToolTip": "Project_00\\Card.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAiwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T05:47:41.803Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Entity.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Entity.cs",
+              "RelativeDocumentMoniker": "Project_00\\_Entity.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Entity.cs",
+              "RelativeToolTip": "Project_00\\_Entity.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAmwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T05:10:14.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Limit.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Limit.cs",
+              "RelativeDocumentMoniker": "Project_00\\_Limit.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Limit.cs",
+              "RelativeToolTip": "Project_00\\_Limit.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T07:27:25.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Deck.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Deck.cs",
+              "RelativeDocumentMoniker": "Project_00\\Deck.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Deck.cs",
+              "RelativeToolTip": "Project_00\\Deck.cs",
+              "ViewState": "AQIAAKEBAAAAAAAAAAAAAPYBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T07:53:20.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Phase_After.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Phase_After.cs",
               "RelativeDocumentMoniker": "Project_00\\Phase_After.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Phase_After.cs",
               "RelativeToolTip": "Project_00\\Phase_After.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T04:33:57.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T04:33:57.716Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Program.cs",
-              "RelativeDocumentMoniker": "Project_00\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Program.cs",
-              "RelativeToolTip": "Project_00\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T04:20:01.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "_Set.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Set.cs",
               "RelativeDocumentMoniker": "Project_00\\_Set.cs",
@@ -124,74 +205,35 @@
               "RelativeToolTip": "Project_00\\_Set.cs",
               "ViewState": "AQIAAGAAAAAAAAAAAAAAAG0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T04:16:27.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T04:16:27.146Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "sCard.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\sCard.cs",
-              "RelativeDocumentMoniker": "Project_00\\sCard.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\sCard.cs",
-              "RelativeToolTip": "Project_00\\sCard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T05:47:59.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Card.cs",
-              "RelativeDocumentMoniker": "Project_00\\Card.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Card.cs",
-              "RelativeToolTip": "Project_00\\Card.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAAkAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T05:47:41.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Deck.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Deck.cs",
-              "RelativeDocumentMoniker": "Project_00\\Deck.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Deck.cs",
-              "RelativeToolTip": "Project_00\\Deck.cs",
-              "ViewState": "AQIAAKkBAAAAAAAAAAAAALkBAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T07:53:20.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Limit.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Limit.cs",
-              "RelativeDocumentMoniker": "Project_00\\_Limit.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Limit.cs",
-              "RelativeToolTip": "Project_00\\_Limit.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEIAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T07:27:25.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "_Draw.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Draw.cs",
               "RelativeDocumentMoniker": "Project_00\\_Draw.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Draw.cs",
               "RelativeToolTip": "Project_00\\_Draw.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAYwBMAAAA5AAAA",
+              "ViewState": "AQIAAOoAAAAAAAAAAAAowPkAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T07:44:35.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T07:44:35.835Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Program.cs",
+              "RelativeDocumentMoniker": "Project_00\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\Program.cs",
+              "RelativeToolTip": "Project_00\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T04:20:01.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "_Data.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Data.cs",
               "RelativeDocumentMoniker": "Project_00\\_Data.cs",
@@ -203,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "_Check.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\GE_Project_GG\\Project_Gonggi\\Project_00\\_Check.cs",
               "RelativeDocumentMoniker": "Project_00\\_Check.cs",

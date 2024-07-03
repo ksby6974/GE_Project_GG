@@ -1,6 +1,7 @@
 ﻿using Project_GG;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -214,11 +215,14 @@ namespace Project_GG
             Console.Write($"【 Hand 】");
 
         }
+
+        // 상태창
         static public void Draw_Target_Stat(Target target)
         {
             string name = target.Get_Name();
             double hp = Convert.ToDouble(target.Get_HP());
             double hpLimit = Convert.ToDouble(target.Get_HPLimit());
+            int iRating = 0;
 
             //컬러
             if (name == "Player")
@@ -237,6 +241,18 @@ namespace Project_GG
             int iLimit = _Limit.Limit(Convert.ToInt32(hp_bar), 0, 100);
 
             //Console.Write($"{hp_bar}");
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (iLimit > (i * 10))
+                {
+                    Console.Write($"■");
+                }
+                else
+                {
+                    Console.Write($"□");
+                }
+            }
 
             Console.Write($"（{hp,3}／{hpLimit,3}）");
 
