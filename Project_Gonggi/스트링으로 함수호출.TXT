@@ -1,0 +1,40 @@
+namespace text
+{
+    public class sCard
+    {
+        public void Show_0()
+        {
+            Console.WriteLine("성공0");
+        }
+
+        public void Show_1()
+        {
+            Console.WriteLine("성공1");
+        }
+
+        public void Show_2()
+        {
+            Console.WriteLine("성공2");
+        }
+    }
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            sCard card = new sCard();
+
+            Type type = typeof(sCard);
+
+            for (int i = 0; i < 3; i++)
+            {
+                var method = type.GetMethod($"Show_{i}");
+
+                method.Invoke(card, null);
+            }
+
+            Console.WriteLine($"{type}");
+        }
+    }
+}

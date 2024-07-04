@@ -28,7 +28,7 @@ namespace Project_GG
         static public Target[] aTargets = new Target[_Limit.g_Limit_Target];
 
         // 물체
-        Entity aEntity = new Entity();
+        static public Entity aEntity = new Entity();
 
         // 생성자
         public Phase()

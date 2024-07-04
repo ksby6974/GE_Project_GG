@@ -39,8 +39,9 @@ namespace Project_GG
         public void InitCard(int id)
         {
             Set_Name(id);
-            this.iMaster = 0;
             this.iId = id;
+
+            this.iMaster = 0;
             this.iAtk = 0;
             this.iDef = 0;
             this.iFreeMove = 0;
@@ -53,24 +54,32 @@ namespace Project_GG
             this.sName = s;
         }
 
+        public void ShowInfo()
+        {
+            Console.WriteLine($"\n───────────────────────────────────────");
+            Console.WriteLine($"{sName}　{iShotType}");
+            Console.WriteLine($"{Get_ID()}:{Get_Name()}");
+            Console.WriteLine($"───────────────────────────────────────\n");
+        }
+
         public void Use()
         {
-            Console.WriteLine($"{Get_ID()}:{Get_Name()}");
+            ShowInfo();
 
             // 엔티티 생성
             if (iShotType > 0)
             {
-
+                int iTemp = Phase.aEntity.Create();
+                Console.WriteLine($"text {iTemp}");
             }
         }
     }
 
     public class StraightShot : Card
     {
-        public StraightShot(int id) : base(id)
+        public StraightShot()
         {
-            sName = "StraightShot";
-            iShotType = 1;
+            this.iShotType = 1;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -55,12 +56,21 @@ namespace Project_GG
                 if (aList_Deck[i] == null)
                 {
                     iResult = 1;
-                    aList_Deck[i] = new Card(iCard);
+
+                    Card card = new Card(iCard);
+
+
+                    aList_Deck[i] = card;
+
+                    // 자료 할당
+
+
+
                     break;
                 }
             }
 
-            // 할당
+            // 할당 실패
             if (iResult == 0)
             {
                 Console.WriteLine($"카드 추가 실패 : {iCard}");

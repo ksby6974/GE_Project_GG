@@ -9,11 +9,19 @@ using System.Threading.Tasks;
 
 namespace Project_GG
 {
-    public enum CardName
+    public class sCard
     {
-        [Description("Blank")] Blank,
-        [Description ("Straight Shot")] StraightShot,
-        [Description("Trick Shot")] TrickShot,
-        [Description("Defense")] Defense,
+        public string s = "sss";
+
+        
+
+
+
+        static void EditCard(ref Card card)
+        {
+
+        }
+
+        //
     }
 }

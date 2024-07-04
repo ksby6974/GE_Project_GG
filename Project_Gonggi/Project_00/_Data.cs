@@ -1,12 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
-using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Project_GG
 {
+    public enum CardName
+    {
+        [Description("Blank")] Blank,
+        [Description("Straight Shot")] StraightShot,
+        [Description("Trick Shot")] TrickShot,
+        [Description("Defense")] Defense,
+    }
+
     static public class _Data
     {
         static public string Data_EnemyName(int id)
@@ -34,7 +44,7 @@ namespace Project_GG
             switch (id)
             {
                 case (int)CardName.StraightShot:
-                    sName = "StraightShot";
+                    sName = "Straight Shot";
                     break;
 
                 case (int)CardName.Defense:
@@ -42,7 +52,7 @@ namespace Project_GG
                     break;
 
                 case (int)CardName.TrickShot:
-                    sName = "TrickShot";
+                    sName = "Trick Shot";
                     break;
 
                 default:
