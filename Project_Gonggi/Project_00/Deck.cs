@@ -58,14 +58,12 @@ namespace Project_GG
                     iResult = 1;
 
                     Card card = new Card(iCard);
+                    sCard sCard = new sCard(iCard);
 
-
+                    sCard.SetCard(ref card);
                     aList_Deck[i] = card;
 
                     // 자료 할당
-
-
-
                     break;
                 }
             }

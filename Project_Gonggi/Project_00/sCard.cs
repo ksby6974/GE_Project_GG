@@ -6,22 +6,34 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project_GG
 {
     public class sCard
     {
-        public string s = "sss";
+        private int iIndex;
 
-        
+        public sCard(int iCard)
+        {
+            iIndex = iCard;
 
+            iIndex = 1;
+        }
 
+        public void SetCard(ref Card card)
+        {
+            sCard newCard = new sCard(1);
 
-        static void EditCard(ref Card card)
+            var method = typeof(sCard).GetMethod($"SetCard_{this.iIndex}");
+            //method.Invoke(newCard, null);
+
+            Console.WriteLine($"{method}");
+        }
+
+        public void SetCard_1(ref Card card)
         {
 
         }
-
-        //
     }
 }
